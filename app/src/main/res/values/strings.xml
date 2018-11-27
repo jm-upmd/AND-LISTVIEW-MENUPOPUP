@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Ejercicio ListView</string>
+    <string name="app_name">II-Ejercicio ListView</string>
+    <string name="menu_nuevo">Nuevo Queso</string>
+    <string name="menu_borrar">Eliminar Queso</string>
+    <string name="menu_modificar">Modificar Queso</string>
+
 </resources>
