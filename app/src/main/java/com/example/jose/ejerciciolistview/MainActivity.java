@@ -112,26 +112,6 @@ public class MainActivity extends AppCompatActivity {
         // Vicula adapter a la ListView
         listViewQuesos.setAdapter(adaptador);
 
-        // Color del item seleccionado en la listView
-        // Esto también se puede establecer en el xml con la propiedad android:listSelector
-
-        //listViewQuesos.setSelector(R.color.ColorGris);
-
-
-
-      /*  // Listener para click en item de la lista
-       listViewQuesos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                posSelec = position;
-
-
-          }
-
-
-        });*/
-
-
 
         // Cramos Listeners de los botones
 
@@ -141,8 +121,6 @@ public class MainActivity extends AppCompatActivity {
                 // Borra el view seleccionado
 
                 borraElemento();
-
-
 
             }
         });
