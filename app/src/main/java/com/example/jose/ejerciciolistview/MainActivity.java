@@ -72,14 +72,17 @@ public class MainActivity extends AppCompatActivity {
                 boton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        posSelec = position;
-                        if(itemSelec != null) {
-                            itemSelec.setBackgroundColor(getResources().getColor(R.color.ColorBlanco));
+                        if(posSelec != position) {
+                            posSelec = position;  // Actualiza posicion seleccionada
+                            if (itemSelec != null) {  // El item que estaba antes sel ahora lo pinta de blanco
+                                itemSelec.setBackgroundColor(getResources().getColor(R.color.ColorBlanco));
+                            }
+                            // pinta item actual de gris y lo marca como itemSelec
+                            item_layout.setBackgroundColor(getResources().getColor(R.color.ColorGris));
+                            itemSelec = item_layout;
                         }
 
-                        item_layout.setBackgroundColor(getResources().getColor(R.color.ColorGris));
-                        itemSelec = item_layout;
-                        abreMenu(v);
+                        abreMenu(v); // abre menu popup
                     }
                 });
 
@@ -183,8 +186,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.menu_modificar:
                         modificaElemento();
                         return true;
-                        default:
-                            return false;
+                    default:
+                        return false;
                 }
 
             }
